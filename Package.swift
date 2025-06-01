@@ -13,8 +13,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "UpscopeIO",
-            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2025.6.2/UpscopeIO-2025.6.2.xcframework.zip",
-            checksum: "809e0cee5127934215fab95aeb13cbe8ac122d5e8d57dd07b2ff372103f9494b"
+            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2025.6.3/UpscopeIO-2025.6.3.xcframework.zip",
+            checksum: "3eeb770c09e117a5da49aa95ced19bdfc6e6e04cc92c72beafa547d4270b3d89"
         )
     ]
 )
