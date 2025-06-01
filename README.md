@@ -17,7 +17,7 @@
 Add the following line to your Podfile:
 
 ```ruby
-pod 'UpscopeIO', '~> 2025.6.1'
+pod 'UpscopeIO', '~> 2025.6.2'
 ```
 
 Then run:
@@ -31,7 +31,7 @@ Add the following dependency to your Package.swift:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2025.6.1")
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2025.6.2")
 ]
 ```
 
@@ -127,4 +127,4 @@ Will be automatically updated by GitHub Actions
 
 ## Version
 
-Current version: 2025.6.1
+Current version: 2025.6.2
