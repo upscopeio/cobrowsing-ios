@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'UpscopeIO'
-  s.version          = '2025.7.0'
+  s.version          = '2025.7.1'
   s.summary          = 'Upscope.io iOS SDK for cobrowsing'
   s.description      = <<-DESC
                        The official iOS SDK for Upscope.io, enabling cobrowsing functionality in iOS apps.

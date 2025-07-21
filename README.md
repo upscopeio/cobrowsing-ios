@@ -17,7 +17,7 @@
 Add the following line to your Podfile:
 
 ```ruby
-pod 'UpscopeIO', '~> 2025.7.0'
+pod 'UpscopeIO', '~> 2025.7.1'
 ```
 
 Then run:
@@ -31,7 +31,7 @@ Add the following dependency to your Package.swift:
 
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2025.7.0")
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2025.7.1")
 ]
 ```
 
@@ -123,4 +123,4 @@ For comprehensive documentation, visit [https://cobrowsingapi.com/docs](https://
 
 ## Version
 
-Current version: 2025.7.0
+Current version: 2025.7.1
