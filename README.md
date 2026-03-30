@@ -8,16 +8,25 @@
 
 ## Installation
 
-### Swift Package Manager
+### Swift Package Manager (recommended)
 
 Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.8"),
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.9"),
 ]
 ```
 
 Or in Xcode: File > Add Package Dependencies > enter `https://github.com/upscopeio/cobrowsing-ios`
+
+### CocoaPods
+
+Add to your `Podfile`:
+```ruby
+pod 'UpscopeSDK', '~> 2026.3.9'
+```
+
+Then run `pod install`.
 
 ### Manual Installation
 
