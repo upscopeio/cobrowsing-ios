@@ -2,19 +2,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "UpscopeIO",
-    platforms: [.iOS(.v16)],
+    name: "UpscopeSDK",
+    platforms: [.iOS(.v14)],
     products: [
         .library(
-            name: "UpscopeIO",
-            targets: ["UpscopeIO"]
+            name: "UpscopeSDK",
+            targets: ["UpscopeSDK"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "UpscopeIO",
-            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2025.11.6/UpscopeIO-2025.11.6.xcframework.zip",
-            checksum: "1f6dad45222cac8b474c95dcde04bb68eb05f29a7193afeb3639459f3a2fae78"
+            name: "UpscopeSDK",
+            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2026.3.5/UpscopeSDK-2026.3.5.xcframework.zip",
+            checksum: "2e641425005ce899730021cae0227d4a1095b1c600eb8b71f27e3fc70d388c8b"
         )
     ]
 )

@@ -1,126 +1,60 @@
 # Upscope iOS SDK
 
-[![Version](https://img.shields.io/cocoapods/v/UpscopeIO.svg?style=flat)](https://cocoapods.org/pods/UpscopeIO)
-[![License](https://img.shields.io/cocoapods/l/UpscopeIO.svg?style=flat)](https://cocoapods.org/pods/UpscopeIO)
-[![Platform](https://img.shields.io/cocoapods/p/UpscopeIO.svg?style=flat)](https://cocoapods.org/pods/UpscopeIO)
+[![Version](https://img.shields.io/cocoapods/v/UpscopeSDK.svg?style=flat)](https://cocoapods.org/pods/UpscopeSDK)
+[![License](https://img.shields.io/cocoapods/l/UpscopeSDK.svg?style=flat)](https://cocoapods.org/pods/UpscopeSDK)
+[![Platform](https://img.shields.io/cocoapods/p/UpscopeSDK.svg?style=flat)](https://cocoapods.org/pods/UpscopeSDK)
 
 ## Requirements
 
-- iOS 16.0+
+- iOS 14.0+
 - Swift 5.9+
 - Xcode 15.0+
 
 ## Installation
 
-### CocoaPods
-
-Add the following line to your Podfile:
-
-```ruby
-pod 'UpscopeIO', '~> 2025.11.6'
-```
-
-Then run:
-```bash
-pod install
-```
-
 ### Swift Package Manager
 
-Add the following dependency to your Package.swift:
-
+Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2025.11.6")
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.5"),
 ]
 ```
 
+Or in Xcode: File > Add Package Dependencies > enter `https://github.com/upscopeio/cobrowsing-ios`
+
+### CocoaPods
+
+Add this to your Podfile:
+```ruby
+pod 'UpscopeSDK', '~> 2026.3.5'
+```
+
+### Manual Installation
+
+Download the XCFramework from the [latest release](https://github.com/upscopeio/cobrowsing-ios/releases/latest) and drag it into your Xcode project.
+
 ## Quick Start
 
-### 1. Initialize the SDK
-
 ```swift
-import UpscopeIO
+import UpscopeSDK
 
-// In your AppDelegate or App initialization
-let upscopeManager = UpscopeManager(apiKey: "YOUR_API_KEY")
-UpscopeManager.shared = upscopeManager  // Required for redaction to work
-upscopeManager.connect()
-```
+// In your AppDelegate or early in app lifecycle
+let config = UpscopeConfiguration(apiKey: "your-api-key")
+try Upscope.shared.initialize(with: config)
 
-### 2. Generate a Session Code
+// Set visitor identification
+Upscope.shared.uniqueId = "user-123"
+Upscope.shared.callName = "John Doe"
 
-```swift
-// Generate a code for your support agent
-let code = upscopeManager.getCode()
-print("Share this code with support: \(code)")
-```
-
-### 3. Redact Sensitive Information
-
-#### SwiftUI
-
-```swift
-TextField("Credit Card", text: $creditCardNumber)
-    .upscopeRedacted()
-
-SecureField("Password", text: $password)
-    .upscopeRedacted()
-```
-
-#### UIKit
-
-```swift
-creditCardTextField.markAsRedacted()
-passwordTextField.markAsRedacted()
-```
-
-## Advanced Usage
-
-### Custom Configuration
-
-```swift
-let config = PartialConfiguration(
-    settings: PartialConfiguration.Settings(
-        requireAuthorizationForSession: true,
-        authorizationPromptTitle: "Screen Sharing Request",
-        authorizationPromptMessage: "Support would like to view your screen",
-        endOfScreenshareMessage: "Thank you for sharing your screen. The session has ended.",
-        translationsOk: "OK"
-    )
-)
-
-let upscopeManager = UpscopeManager(
-    apiKey: "YOUR_API_KEY",
-    localConfig: config
-)
-```
-
-### Session Management
-
-```swift
-// Start a session programmatically
-upscopeManager.startSession()
-
-// End the current session
-upscopeManager.endSession()
-
-// Get session status
-if let session = upscopeManager.session {
-    print("Session ID: \(session.id)")
-    print("Status: \(session.status)")
-}
+// Register delegate for events
+Upscope.shared.delegate = self
 ```
 
 ## Documentation
 
-For comprehensive documentation, visit [https://cobrowsingapi.com/docs](https://cobrowsingapi.com/docs)
+For full documentation, visit [docs.upscope.io](https://docs.upscope.io).
 
-## Support
+## License
 
-- 📧 Email: support@upscope.com
-- 💬 Live Chat: Visit [upscope.com](https://upscope.com)
-
-## Version
-
-Current version: 2025.11.6
+Proprietary. See your agreement with Upscope for details.
