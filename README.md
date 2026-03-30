@@ -1,9 +1,5 @@
 # Upscope iOS SDK
 
-[![Version](https://img.shields.io/cocoapods/v/UpscopeSDK.svg?style=flat)](https://cocoapods.org/pods/UpscopeSDK)
-[![License](https://img.shields.io/cocoapods/l/UpscopeSDK.svg?style=flat)](https://cocoapods.org/pods/UpscopeSDK)
-[![Platform](https://img.shields.io/cocoapods/p/UpscopeSDK.svg?style=flat)](https://cocoapods.org/pods/UpscopeSDK)
-
 ## Requirements
 
 - iOS 14.0+
@@ -17,18 +13,11 @@
 Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.5"),
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.6"),
 ]
 ```
 
 Or in Xcode: File > Add Package Dependencies > enter `https://github.com/upscopeio/cobrowsing-ios`
-
-### CocoaPods
-
-Add this to your Podfile:
-```ruby
-pod 'UpscopeSDK', '~> 2026.3.5'
-```
 
 ### Manual Installation
 
