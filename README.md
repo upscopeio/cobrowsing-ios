@@ -13,7 +13,7 @@
 Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.6"),
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.7"),
 ]
 ```
 
