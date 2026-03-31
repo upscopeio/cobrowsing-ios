@@ -13,7 +13,7 @@
 Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.11"),
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.3.12"),
 ]
 ```
 
@@ -23,7 +23,7 @@ Or in Xcode: File > Add Package Dependencies > enter `https://github.com/upscope
 
 Add to your `Podfile`:
 ```ruby
-pod 'UpscopeSDK', '~> 2026.3.11'
+pod 'UpscopeSDK', '~> 2026.3.12'
 ```
 
 Then run `pod install`.
