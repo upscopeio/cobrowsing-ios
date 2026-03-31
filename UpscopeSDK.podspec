@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name            = "UpscopeSDK"
-  s.version         = "2026.3.9"
+  s.version         = "2026.3.11"
   s.summary         = "Upscope iOS cobrowsing SDK — live screen sharing for support teams."
   s.description     = <<-DESC
     Enable real-time cobrowsing in your iOS app. Agents can view the user's
