@@ -13,7 +13,7 @@
 Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.6.1"),
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.6.3"),
 ]
 ```
 
@@ -23,7 +23,7 @@ Or in Xcode: File > Add Package Dependencies > enter `https://github.com/upscope
 
 Add to your `Podfile`:
 ```ruby
-pod 'UpscopeSDK', '~> 2026.6.1'
+pod 'UpscopeSDK', '~> 2026.6.3'
 ```
 
 Then run `pod install`.
@@ -48,7 +48,7 @@ extension target.
 CocoaPods:
 ```ruby
 target 'MyBroadcastExtension' do
-  pod 'UpscopeSDK/BroadcastExtension', '~> 2026.6.1'
+  pod 'UpscopeSDK/BroadcastExtension', '~> 2026.6.3'
 end
 ```
 
@@ -61,7 +61,10 @@ Capabilities > App Groups), then add the group id to the **extension's**
 ```
 
 **3. Subclass `UpscopeSampleHandler`** in the extension's generated
-`SampleHandler.swift` — the base class handles frame capture and IPC:
+`SampleHandler.swift` — the base class handles frame capture and IPC. The
+published SDK ships `UpscopeBroadcastExtension` as its own module (a separate
+xcframework) for both Swift Package Manager and CocoaPods, so the import is the
+same either way:
 ```swift
 import UpscopeBroadcastExtension
 
