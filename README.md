@@ -13,7 +13,7 @@
 Add the following to your `Package.swift`:
 ```swift
 dependencies: [
-    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.7.4"),
+    .package(url: "https://github.com/upscopeio/cobrowsing-ios.git", from: "2026.7.5"),
 ]
 ```
 
@@ -23,7 +23,7 @@ Or in Xcode: File > Add Package Dependencies > enter `https://github.com/upscope
 
 Add to your `Podfile`:
 ```ruby
-pod 'UpscopeSDK', '~> 2026.7.4'
+pod 'UpscopeSDK', '~> 2026.7.5'
 ```
 
 Then run `pod install`.
@@ -48,7 +48,7 @@ extension target.
 CocoaPods:
 ```ruby
 target 'MyBroadcastExtension' do
-  pod 'UpscopeSDK/BroadcastExtension', '~> 2026.7.4'
+  pod 'UpscopeSDK/BroadcastExtension', '~> 2026.7.5'
 end
 ```
 
@@ -70,6 +70,16 @@ import UpscopeBroadcastExtension
 
 class SampleHandler: UpscopeSampleHandler {}
 ```
+
+**4. Point the app at the extension.** Add the same App Group id plus the
+extension's bundle identifier to your **app's** `Info.plist`:
+```xml
+<key>UpscopeAppGroupId</key>
+<string>group.your.app.group</string>
+<key>UpscopeBroadcastExtensionBundleId</key>
+<string>your.app.BroadcastExtension</string>
+```
+No code changes needed — the SDK picks these up automatically.
 
 ## Quick Start
 
