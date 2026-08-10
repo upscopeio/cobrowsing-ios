@@ -19,13 +19,13 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "UpscopeSDK",
-            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2026.8.1/UpscopeSDK-2026.8.1.xcframework.zip",
-            checksum: "067a5197dc7b311f12c14103bf3be59ba383f0e4ec36079a7c66b4d8f1cdcda2"
+            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2026.8.2/UpscopeSDK-2026.8.2.xcframework.zip",
+            checksum: "cdd425fb66a30aa5fc25861ece6df73b5e11166d5d84bc4985b046343289219e"
         ),
         .binaryTarget(
             name: "UpscopeBroadcastExtension",
-            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2026.8.1/UpscopeBroadcastExtension-2026.8.1.xcframework.zip",
-            checksum: "03cf1a3b4997b8c9d7b6730a9e3aca92c623e254a5fc2d57d2d3e62a83b8629f"
+            url: "https://github.com/upscopeio/cobrowsing-ios/releases/download/v2026.8.2/UpscopeBroadcastExtension-2026.8.2.xcframework.zip",
+            checksum: "5b2341ebb77fa74cc602d9342568a6e2a0439a123da59f32a9642460fa9dd3b9"
         )
     ]
 )
